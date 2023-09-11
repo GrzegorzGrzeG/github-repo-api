@@ -1,6 +1,5 @@
 package com.example.demo.service;
 
-import com.example.demo.entity.Branch;
 import com.example.demo.entity.Repo;
 import org.springframework.stereotype.Service;
 
@@ -16,16 +15,6 @@ public class MainService {
         this.branchService = branchService;
     }
 
-    public List<Repo> resoResponse(String username) {
-        return repoService.user(username);
-    }
-
-    public List<Branch> branchResponse(String username, String repo) {
-        return branchService.getBranch(username, repo);
-
-    }
-
-
     public List<Repo> response(String username) {
         List<Repo> repos = repoService.user(username);
         for (Repo repo: repos) {
@@ -34,6 +23,7 @@ public class MainService {
         }
         return repos;
     }
+
 
 
 }
