@@ -1,12 +1,8 @@
 package com.example.demo.service;
 
 import com.example.demo.entity.User;
-import com.example.demo.exception.ApiError;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.HttpClientErrorException;
-import org.springframework.web.client.ResponseErrorHandler;
 import org.springframework.web.client.RestTemplate;
 
 @Service
