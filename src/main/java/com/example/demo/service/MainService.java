@@ -7,6 +7,7 @@ import java.util.List;
 
 @Service
 public class MainService {
+
     private final RepoService repoService;
     private final BranchService branchService;
 
@@ -17,13 +18,11 @@ public class MainService {
 
     public List<Repo> response(String username) {
         List<Repo> repos = repoService.user(username);
-        for (Repo repo: repos) {
+        for (Repo repo : repos) {
             repo.setBranches(branchService.getBranch(username, repo.getName()));
-
         }
         return repos;
     }
-
 
 
 }
