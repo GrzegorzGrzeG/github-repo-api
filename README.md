@@ -1,6 +1,6 @@
 # github-repo-api
 ## Description
-Simple api for checking user repositories and their recent commits
+Simple api for checking user repositories(not forks) and their recent commits
 ## How to use
 Run `http://localhost:8080/{username}` where `{username}` is the name of the user you looking for.
 ## Exception handler
